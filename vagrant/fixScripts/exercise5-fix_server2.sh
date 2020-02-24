@@ -1,2 +1,48 @@
 #!/bin/bash
 #add fix to exercise5-server2 here
+echo '-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAqe1R11ukCZz/Emb9oGLzLJUZTzC3HBDfijnzq9J8fSYO8zB3
+a0jxYWyv2KaI3Z2fOWyuOmce1oFgjRZcbsorBU4tz7Z28bZSC+B7INmfN81oarnQ
+qrWL6RD1+WoNjhvScrY9xYN4MehA86dnyjqBF59mrBjPs/OOrtHaz+Jdsb3z3p4f
+fUhpLbPM1BD+ov4qkRlRnDJg6iyI0s+a+At9X3iBFooMN4SMzUyMIkUW4vDXyzXR
+yNhfoHa6xhGS42m+yTy9VxsuiXW5hb1vA6GubC+cO18QbnH8BNFTDAaZdqHkLkiQ
+RnkqIVPSpnkbfq4MU2ApfHUqYrBFmeL3v1a7ZwIDAQABAoIBAQCViMokgfhwnT+5
+qfg3U9w6t1p2XaBFinOs6CKOacQzPXKaf2QXfTEtUr/MH4EBxNuBZSpNKsHwchnN
+Doh41l/VY17dEuzI+HBrEzhHSDrcmF3yzWHbV7evecV7nuAe1kzztXvWfEMhaAkA
+YajsRV+kshlgCNV+vi4pmXK8za814Utuz+YnFW2sTHoiPhEwBCU3ey+EaYlaScnL
+AkrO+dF9d3bb8CYjv0JfDfE9/aLKmHRw0pEz6rlh2HyuKJfgGEAcssrIkZebhrRH
+Ub2APfFJwSSg2WYjhjgQu5ykqtxmgmslBYC4WoB/WO/erX3F2MREn+bQCVAe+xJQ
+SUXb/N5BAoGBANoUzAhN5NxABUaaOGsQN5G+YHNxYjrjs5/LjAb6CgAjOnVfL9xM
+xeARNiu1giWWNzLdR+euucPRlLPmqvIECPmrMxssDgi4MrOh8DRYekdBdtseN2lk
+8COunhxzTXRaSLZnHnTWXp+0KdK2/9HjceSZWAOG27LVLq4nfHvU9TY1AoGBAMd5
+Fsha1rEtfFqfugWJhOnhCAbUTZ6Rl1NBqWX2z+DGu09ZkltLWMQbyeJg1bBiX2EP
+2M/Um1X5D9fBXtw1a8cMaURwdM3VY3soEBxeZiT5tJtSN6MS08n1l+YpnGlkgyVL
+FelOP0p/hFf4JnSqpz9aatGMsu2FAT+c5CqSVi6rAoGAagz/A3LNvoWrix/oG7hx
+LYDE6p7SxAyDB0w2thXV0ydOgFFftuPmvgXgr/S+a4TXJvcQxovjbmR2yd18d+Ca
+dL9aRPZxhK/+h/hSFUKJhClDoV7aV3hshw2defxgSBq3jWwsFWlB7qvwQrYXRXwz
+oJUphd2I7ThaUPqGwLlY3ZkCgYBeGqw63VAHylOuVUhnMFd6FuW4gxQTSNBBQOrv
+5Z5whpD7gGBhnYxFCG8X02M8kUw5+EXq1nxp9NQaj2l3LeSoxRwsY3lXWeJSybXA
+DHDX5M3lsMX6svkjgC+nL95QglC0mVW++WE2fi4rajCKPbAlXTyjm2MWVvcd0aB6
+zQrHfQKBgQC3rqHczn+k2XX3ssMFrpAbazTa5Febo2U3rA9DaqFyKNuRI3gzAnt2
+yvKjHdx5yVfTs/k52EstgDsbZFwGzDGyexISJbzkPn/3Bnj9i4GNwayySLmDPN0S
+kxMVb8qnqH17/P156hRMn1d8V9oZRxToKFCWmWeviCNqoTZ1+8II+Q==
+-----END RSA PRIVATE KEY-----' | sudo tee /home/vagrant/.ssh/id_rsa
+
+sudo chmod 600  /home/vagrant/.ssh/id_rsa
+sudo chown vagrant:vagrant /home/vagrant/.ssh/id_rsa
+
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCp7VHXW6QJnP8SZv2gYvMslRlPMLccEN+KOfOr0nx9Jg7zMHdrSPFhbK/YpojdnZ85bK46Zx7WgWCNFlxuyisFTi3PtnbxtlIL4Hsg2Z83zWhqudCqtYvpEPX5ag2OG9Jytj3Fg3gx6EDzp2fKOoEXn2asGM+z846u0drP4l2xvfPenh99SGkts8zUEP6i/iqRGVGcMmDqLIjSz5r4C31feIEWigw3hIzNTIwiRRbi8NfLNdHI2F+gdrrGEZLjab7JPL1XGy6JdbmFvW8Doa5sL5w7XxBucfwE0VMMBpl2oeQuSJBGeSohU9KmeRt+rgxTYCl8dSpisEWZ4ve/Vrtn vagrant@server2' | sudo tee /home/vagrant/.ssh/id_rsa.pub
+
+sudo chmod 644  /home/vagrant/.ssh/id_rsa.pub
+sudo chown vagrant:vagrant /home/vagrant/.ssh/id_rsa.pub
+
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDggx57hSos1UdJSLcFNikI3eq4lkPK4KAWYL6jNidOZ+PNR/7eNc2S8YuueZ2ankyiQxz5qIc4KL0DrmC4+xxmK/I4PCrOs8QNMhhKUhm331zZSMn9QLZShbG44sWUDoitWOJZmL491LnFa2nMVjBS999G6Xx86nh83C9pIXp1OnC2bQ5xzVlqietOCGZsl4sMhTqw7tGwpmwLUcIsOPI7C+oHsGQLTPYTn3LUd1ZTUXVoXs4Qtqn7oFO0YkvTShd2ZMb8sUhmCUGQJJAMZwdbc9KBC0KJAIYeM9lZCVgtaARzmYxrRDr+8OTmVi9GyuyId2q3/rWo76oXcHuv79an vagrant@server1' | sudo tee -a /home/vagrant/.ssh/authorized_keys
+
+sudo chmod 600  /home/vagrant/.ssh/authorized_keys
+sudo chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+
+echo 'server1 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC42OGw1jHMx85PzYySHGH5i4Gl+H7UdEP9+sjlXr1YtYVs+Bft+IH/HL5jHjdGxwQ5FnpvPDgCgsdAd5IEfQag/Uifu2BGb0zvxBgVqbYl4Zhf05LvQx5jEuPh5jivtkrVDtYVUZGOfEkC9MB/gT7pVXvubpPv3hzxUKqFGLf/A6CEvbDagp+VDAmdpEOu30FOo+Ml7bIUGhrAmiXlYcFXQX/qwSj5sXBxGyuqqYXufy6OhX3CTj9dY/GzcsIwrlo1dXJACYL/nsrftdF9aicRUg2jN7Lq9rrkhzu79BZDp/uhG1114h7qSR7Vlg8MWeWGoYAEN01G1P4oiRzTI5MJ' | sudo tee -a /home/vagrant/.ssh/known_hosts
+
+sudo chmod 600  /home/vagrant/.ssh/known_hosts
+sudo chown vagrant:vagrant /home/vagrant/.ssh/known_hosts
+
